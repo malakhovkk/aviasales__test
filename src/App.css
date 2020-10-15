@@ -1,38 +1,177 @@
-.App {
-  text-align: center;
+body 
+{
+  background: #E5E5E5;
+  width: 960px;
+  margin:0 auto;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.image_logo
+{
+  width: 100%;
+  margin-top: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.image_logo 
+{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+ul 
+{
+  list-style-type: none;
+}
+.menu__list__item 
+{
+  padding-left: 50px;
+  position: relative;
+  padding: 10px 50px;
+}
+input[type="checkbox"]
+{
+  cursor: pointer;
+  position: absolute;
+  left: 10px;
+  z-index: 1;
+}
+.menu__list__item:hover
+{
+  background: #F1FCFF;
+}
+.menu__checkbox 
+{
+  position: absolute;
+  opacity: 0;
+}
+
+.menu__list 
+{
+  padding: 0;
+}
+
+.menu__name 
+{
+  font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 20px;
+}
+label.menu__name 
+{
+  cursor: pointer;
+}
+label .menu__checkbox  {
+  display: inline-flex;
+  align-items: center;
+}
+label .menu__checkbox ~ .rect {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #9ABBCE;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+label .menu__checkbox:checked ~ .rect {
+  border-color: #2196F3;
+  background-image: url("Shape.png");
+}
+.vouchers
+{
+  margin-left: 20px;
+}
+.split
+{
+  width: 252px;
+  height: 50px;
+  font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+background: #FFFFFF;
+
+border: 1px solid #DFE5EC;
+box-sizing: border-box;
+outline: none;
+padding:0;
+border-radius: 5px 0px 0px 5px;
+text-transform: uppercase;
+cursor: pointer;
+}
+.content
+{
+  display: flex;
+  flex-direction: row;
+}
+.active 
+{
+  background: #2196F3;
   color: white;
 }
+#second
+{
+  border-radius: 0px 5px 5px 0px;
+}
+.voucher 
+{
+  margin-top: 20px;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 502px;
+  height: 184px;
+  padding: 20px 26px;
+  box-sizing: border-box;
 
-.App-link {
-  color: #61dafb;
+}
+.first
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.voucher__item
+{
+  width: 141px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.voucher
+{
+  margin-top: 10px;
+}
+.second
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.voucher__price
+{
+  font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+color:#2196F3;
+font-size: 24px;
+}
+.voucher__title
+{
+  letter-spacing: 0.5px;
+text-transform: uppercase;
+
+color: #A0B0B9;
+}
+.voucher__content
+{
+  font-family: Open Sans;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+color: #4A4A4A;
 }
