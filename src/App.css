@@ -65,6 +65,8 @@ label.menu__name
   top: 5px;
   left: 5px;
   opacity: 0;
+  animation: var(--animation, none);
+  transform: scale(0) translateZ(0);
 }
 .menu__checkmark 
 {
@@ -75,12 +77,13 @@ label.menu__name
   top: 10px;
   left: 8px;
   position: absolute;
+  outline: none;
 }
 label .menu__checkbox  {
   display: inline-flex;
   align-items: center;
 }
-.menu__checkbox:checked 
+.menu__checkbox:checked ~ .menu__checkmark 
 {
   border-color: #2196F3;
 }
@@ -151,7 +154,7 @@ cursor: pointer;
 {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .voucher__item
 {
@@ -194,3 +197,22 @@ font-weight: 600;
 font-size: 14px;
 color: #4A4A4A;
 }
+
+.menu__checkbox:checked ~ .menu__checkmark .rect {
+  --animation: bounce 0.4s linear forwards 0.2s;
+}
+
+@keyframes bounce {
+  50% {
+    transform: scale(1.2);
+  }
+
+  75% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
