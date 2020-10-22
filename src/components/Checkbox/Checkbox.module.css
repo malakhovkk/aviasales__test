@@ -1,0 +1,82 @@
+.menu__name 
+{
+  font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 13px;
+line-height: 20px;
+}
+label.menu__name 
+{
+  cursor: pointer;
+}
+.rect 
+{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  opacity: 0;
+  animation: var(--animation, none);
+  transform: scale(0) translateZ(0);
+}
+.menu__checkmark 
+{
+  width: 20px;
+  height: 20px;
+  border: 1px solid #9ABBCE;
+  border-radius: 2px;
+  top: 10px;
+  left: 8px;
+  position: absolute;
+  outline: none;
+}
+.menu__checkbox  {
+  display: inline-flex;
+  align-items: center;
+}
+.menu__checkbox:checked ~ .menu__checkmark 
+{
+  border-color: #2196F3;
+}
+.menu__checkbox ~ .menu__checkmark  .rect {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  left: 4px;
+  width: 12px;
+  height: 8px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+.menu__checkbox:checked  ~ .menu__checkmark  .rect
+{
+  opacity:1;
+}
+
+.menu__checkbox:checked ~ .menu__checkmark .rect {
+    --animation: bounce 0.4s linear forwards 0.2s;
+  }
+
+  .menu__checkbox 
+{
+  position: absolute;
+  opacity: 0;
+}
+
+
+
+@keyframes bounce {
+    50% {
+      transform: scale(1.2);
+    }
+  
+    75% {
+      transform: scale(0.9);
+    }
+  
+    100% {
+      transform: scale(1);
+    }
+  }
+  

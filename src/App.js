@@ -1,9 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Menu from './containers/Menu';
-import Logo from './containers/Logo';
-import Vouchers from './containers/Vouchers';
+import Menu from './containers/Menu/Menu';
+import Logo from './components/Logo';
+import Vouchers from './containers/Vouchers/Vouchers';
 
 function App() {
   return (
