@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useMemo } from 'react';
 
 
 import styles from './Voucher.module.css'
@@ -8,15 +8,15 @@ function Voucher( {children, price, carrier, originFrom, destinationFrom, timeSt
     console.log(stopsFrom);
     let stopsCities1 = stopsFrom.join(", ");
     let stopsCities2 = stopsTo.join(", ");
-
+    useMemo(
+        () =>{
     function convertPrice(price)
     {
         let p = price % 1000;
         if(p < 10) return "00" + p;
         if(p < 100) return "0" + p;
         return p;
-    }
-
+    }}, price);
     return (
     <div className="voucher">
     <div className={styles.first}>
